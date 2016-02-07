@@ -13,12 +13,15 @@
 <script>
     var j;
     var m;
+    var n;
     var favorites = [];
     var insertFavorites="";
     var favoriteText="";
     var change="";
     document.getElementById("view").innerHTML = movies;
 </script>
+
+<h2>This is my favorites movies: </h2>
 
 <select id="favorites">
 
@@ -29,13 +32,16 @@
     document.getElementById("favorites").innerHTML=favoriteText;
 </script>
 </select>
+
 <button type="button" onclick="myFunctionAddFavorites ()">Add favorites</button>
 <script>
     function myFunctionAddFavorites (){
         insertFavorites=document.getElementById("favorites").value;
-        favorites.push (insertFavorites);
+        favorites.push(insertFavorites);
         document.getElementById("favori").innerHTML=favorites;
         insertFavorites="";
+
+        change="";
 
         for(m=0; m<favorites.length; m++){
             change+= "<option>"+favorites[m]+"</option>"
@@ -48,12 +54,20 @@
 
 <select id="move">
 
+    <script>
+     //  for(n=0; n<favorites.length; n++){
+     //      change+="<option>"+favorites[n]+"</option>"
+     //  }
+     //  document.getElementById("move").innerHTML=change;
+    </script>
+
 </select>
 
 <button type="button" onclick="myFunctionMoveFavorites ()">Move favorites</button>
 
 <script>
     function myFunctionMoveFavorites (){
+
 
     }
 </script>
