@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var arr = ["1", "2", "3", "4"];
+    var text="";
+    var i;
+    var j;
+    var s= arr.length;
+
+
+</script>
+
+<p id="view"></p>
+
+<script>
+    document.getElementById("view").innerHTML=arr;
+</script>
+
+<form>
+
+<select id="present" size="10">
+
+        <script>
+            for (i=0; i<arr.length; i++){
+
+               text+="<option>"+arr[i]+"</option>";
+            }
+            document.getElementById("present").innerHTML=text;
+        </script>
+</select>
+    <button type="button" onclick="myFunctionRemove ()">Remove</button>
+</form>
+<p id="qaz"></p>
+<script>
+
+    function myFunctionRemove(){
+        var x = document.getElementById("present").selectedIndex;
+        arr.splice(x,1);
+    //document.getElementById("qaz").innerHTML= x;
+        document.getElementById("view").innerHTML=arr;
+
+            text="";
+
+        for (i=0; i<arr.length; i++){
+
+            text+="<option>"+arr[i]+"</option>";
+        }
+        document.getElementById("present").innerHTML=text;
+    }
+</script>
+
+<select id="preview" onchange="ChangeList ()">
+    <script>
+                document.getElementById("preview").innerHTML=text;
+    </script>
+</select>
+
+<select id="subpreview"></select>
+
+<script>
+    var elementPosition = {};
+    elementPosition ["i"]
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorites</title>
+    <link rel="import" href="proben.html">
+</head>
+<body>
+<h2>This is all movies:</h2>
+
+<p id="view"></p>
+
+<script>
+    var j;
+    var m;
+    var favorites = [];
+    var insertFavorites="";
+    var favoriteText="";
+    var change="";
+    document.getElementById("view").innerHTML = movies;
+</script>
+
+<select id="favorites">
+
+<script>
+    for(j=0; j<movies.length; j++){
+        favoriteText+= "<option>"+movies[j]+"</option>"
+    }
+    document.getElementById("favorites").innerHTML=favoriteText;
+</script>
+</select>
+<button type="button" onclick="myFunctionAddFavorites ()">Add favorites</button>
+<script>
+    function myFunctionAddFavorites (){
+        insertFavorites=document.getElementById("favorites").value;
+        favorites.push (insertFavorites);
+        document.getElementById("favori").innerHTML=favorites;
+        insertFavorites="";
+
+        for(m=0; m<favorites.length; m++){
+            change+= "<option>"+favorites[m]+"</option>"
+        }
+        document.getElementById("move").innerHTML=change;
+    }
+</script>
+
+<p id="favori"></p>
+
+<select id="move">
+
+</select>
+
+<button type="button" onclick="myFunctionMoveFavorites ()">Move favorites</button>
+
+<script>
+    function myFunctionMoveFavorites (){
+
+    }
+</script>
+
+
+</body>
+</html>
